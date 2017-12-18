@@ -9,3 +9,17 @@ body {
   left: 50%;
   transform: translatex(-50%);
 }
+
+.product-box {
+  padding: 20px;
+  border: solid black 1px;
+}
+
+.product-name {
+  font-weight: bold;
+}
+
+#Jumbo {
+  max-width: 100px;
+  height: auto;
+}

@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 
 const Nav = ({ navLinks }) => {
   const navLinks1 = navLinks.map(links => {
@@ -13,16 +13,16 @@ const Nav = ({ navLinks }) => {
 
   return (
     <nav className="navbar navbar-default" role="navigation">
-      <div class="navbar-header">
+      <div className="navbar-header">
         <button
           type="button"
-          class="navbar-toggle"
+          className="navbar-toggle"
           data-toggle="collapse"
           data-target=".navbar-collapse"
         >
-          <span class="icon-bar" />
-          <span class="icon-bar" />
-          <span class="icon-bar" />
+          <span className="icon-bar" />
+          <span className="icon-bar" />
+          <span className="icon-bar" />
         </button>
       </div>
       <div className="navbar-collapse collapse">
