@@ -1,28 +1,26 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import Nav from './Nav';
-import './App.css';
-import Menu from './Menu';
-import faker from 'faker';
-import Jumbo from './Jumbo';
+import React, { Component } from "react";
+import logo from "./logo.svg";
+import Nav from "./Nav";
+import "./App.css";
+import Menu from "./Menu";
+import faker from "faker";
+import Jumbo from "./Jumbo";
+import Reservation from "./Reservation";
+//import Map1 from "./Map1";
 
 const navLinks = [
   {
-    name: 'Reservation',
-    link: '#Reservation'
+    name: "Menu",
+    link: "#Menu"
   },
   {
-    name: 'Menu',
-    link: '#Menu'
-  },
-  {
-    name: 'Photos',
-    link: '#Photos'
-  },
-  {
-    name: 'Contact',
-    link: '#Contact'
+    name: "Reservation",
+    link: "#Reservation"
   }
+  // {
+  //   name: "Map",
+  //   link: "#map"
+  // }
 ];
 
 let dishes = [];
@@ -36,7 +34,34 @@ for (let i = 0; i < 10; i++) {
   };
   dishes.push(dish);
 }
-console.log(dishes);
+
+let reservationFields = [
+  {
+    type: "text",
+    name: "name",
+    label: "Name:"
+  },
+  {
+    type: "tel",
+    name: "phone",
+    label: "Phone #:"
+  },
+  {
+    type: "date",
+    name: "date",
+    label: "Date:"
+  },
+  {
+    type: "time",
+    name: "time",
+    label: "Time:"
+  },
+  {
+    type: "number",
+    label: "# of Guests:"
+  }
+];
+
 class App extends Component {
   render() {
     return (
@@ -46,11 +71,14 @@ class App extends Component {
           <h1 className="App-title">Welcome to Spinning Plates Bistro!</h1>
         </header>
         <Nav navLinks={navLinks} />
-        {/* <p className="App-intro" /> */}
         <Jumbo id="Jumbo" />
         <div id="Menu">
           <h2>Our Menu</h2>
           <Menu list={dishes} />
+        </div>
+        <div id="Reservation">
+          <h2>Make a Reservation</h2>
+          <Reservation formFields={reservationFields} />
         </div>
       </div>
     );

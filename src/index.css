@@ -23,3 +23,8 @@ body {
   max-width: 100px;
   height: auto;
 }
+
+#map {
+  height: 400px;
+  width: 100%;
+}
