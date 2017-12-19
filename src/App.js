@@ -6,7 +6,6 @@ import Menu from "./Menu";
 import faker from "faker";
 import Jumbo from "./Jumbo";
 import Reservation from "./Reservation";
-//import Map1 from "./Map1";
 
 const navLinks = [
   {
@@ -17,10 +16,6 @@ const navLinks = [
     name: "Reservation",
     link: "#Reservation"
   }
-  // {
-  //   name: "Map",
-  //   link: "#map"
-  // }
 ];
 
 let dishes = [];
